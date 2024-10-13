@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wafa's Project</title>
+        <style>
+            h1{
+                text-align: center;
+                text-decoration: underline;
+                color: blue;
+                text-transform: capitalize;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>mapping and arranging an array</h1>
+        <p id="p-v"></p>
+        <button onclick="ascending()"> Show numbers in Ascending order</button>
+        <button onclick="descending()"> Show numbers in Descending order</button>
+        <p id="res"></p>
+
+        <script>
+            var numbers = [2, 6, 15, 7];
+            document.getElementById("res").innerHTML = numbers;
+            function myFunction(num) {
+                return num * 5 ;
+            }
+
+            var newarray= numbers.map(myFunction);
+            document.getElementById("p-v").innerHTML=newarray;
+
+            function ascending(){
+                numbers.sort(function(a,b){return(a-b)});
+                document.getElementById("res").innerHTML= numbers;
+            }
+
+            function descending(){
+                numbers.sort(function(a, b){return(b-a)});
+                document.getElementById("res").innerHTML= numbers;
+            }
+        </script>
+
+    </body>
+</html>
